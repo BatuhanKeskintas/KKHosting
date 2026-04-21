@@ -1,0 +1,217 @@
+/* ============================================
+   KK Hosting — About Page Styles
+   ============================================ */
+
+/* ── Story Section ── */
+.story-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.story-content {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
+.story-content p {
+  color: var(--gray-600);
+  margin-bottom: var(--space-6);
+}
+
+.story-image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+}
+
+.story-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.story-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* ── Mission Section ── */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+.mission-card {
+  text-align: center;
+  padding: var(--space-10);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.mission-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  background: rgba(212, 175, 55, 0.05);
+  transform: translateY(-4px);
+}
+
+.mission-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-5);
+}
+
+.mission-card h4 {
+  color: var(--gold-400);
+  margin-bottom: var(--space-3);
+  font-family: var(--font-display);
+}
+
+.mission-card p {
+  color: var(--gray-400);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  margin-bottom: 0;
+}
+
+/* ── Team Section ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+.team-card {
+  text-align: center;
+}
+
+.team-card__image {
+  width: 160px;
+  height: 160px;
+  border-radius: var(--radius-full);
+  margin: 0 auto var(--space-5);
+  overflow: hidden;
+  border: 3px solid var(--gold-400);
+  padding: 3px;
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-200));
+}
+
+.team-card__image-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--navy-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-3xl);
+  color: var(--gold-400);
+  font-family: var(--font-display);
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.team-card__image-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card h4 {
+  margin-bottom: var(--space-1);
+}
+
+.team-card__role {
+  font-size: var(--text-sm);
+  color: var(--gold-500);
+  font-weight: 500;
+  margin-bottom: var(--space-3);
+}
+
+.team-card p {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Values / Philosophy ── */
+.values-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.value-item {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  border: 1px solid var(--color-border);
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.value-item:hover {
+  border-color: var(--gold-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.value-item__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--navy-800), var(--navy-700));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xl);
+}
+
+.value-item h4 {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-1);
+}
+
+.value-item p {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  margin-bottom: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .mission-grid,
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .story-section {
+    grid-template-columns: 1fr;
+  }
+
+  .story-image img {
+    height: 350px;
+  }
+
+  .mission-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-list {
+    grid-template-columns: 1fr;
+  }
+}

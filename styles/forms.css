@@ -1,0 +1,230 @@
+/* ============================================
+   KK Hosting — Form Styles
+   ============================================ */
+
+/* ── Form Layout ── */
+.form-section {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+.form-grid--full {
+  grid-template-columns: 1fr;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-group--full {
+  grid-column: span 2;
+}
+
+.form-group label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--navy-800);
+  letter-spacing: var(--tracking-wide);
+}
+
+.form-group label .required {
+  color: var(--gold-500);
+  margin-left: 2px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  color: var(--gray-700);
+  background: var(--white);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold-400);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--gray-300);
+}
+
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%236b6b6b' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  padding-right: var(--space-10);
+}
+
+/* ── Form Submit ── */
+.form-actions {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.form-privacy {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  text-align: center;
+}
+
+/* ── Success State ── */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: var(--space-16) var(--space-8);
+}
+
+.form-success.show {
+  display: block;
+}
+
+.form-success__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-300));
+  margin: 0 auto var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  animation: scaleIn 0.5s var(--ease-out);
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.form-success h3 {
+  color: var(--navy-800);
+  margin-bottom: var(--space-3);
+}
+
+.form-success p {
+  color: var(--gray-500);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ── Contact Info ── */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+.contact-info__item {
+  text-align: center;
+  padding: var(--space-8);
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.contact-info__item:hover {
+  border-color: var(--gold-200);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-info__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--navy-800), var(--navy-700));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+  font-size: var(--text-xl);
+}
+
+.contact-info__item h4 {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-base);
+}
+
+.contact-info__item p {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  margin-bottom: 0;
+}
+
+.contact-info__item a {
+  color: var(--gold-500);
+  font-weight: 500;
+}
+
+.contact-info__item a:hover {
+  color: var(--gold-400);
+}
+
+/* ── WhatsApp CTA ── */
+.whatsapp-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: #25d366;
+  color: var(--white);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--text-base);
+  transition: all var(--duration-base) var(--ease-out);
+  text-decoration: none;
+}
+
+.whatsapp-cta:hover {
+  background: #1fba59;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-cta svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group--full {
+    grid-column: span 1;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,233 @@
+/* ============================================
+   KK Hosting — Listings Page Styles
+   ============================================ */
+
+/* ── Page Hero ── */
+.page-hero {
+  position: relative;
+  padding: calc(var(--header-height) + var(--space-20)) 0 var(--space-16);
+  background: var(--navy-900);
+  overflow: hidden;
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to top, var(--white), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.page-hero--cream::after {
+  background: linear-gradient(to top, var(--cream), transparent);
+}
+
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.page-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero h1 {
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.page-hero .section-subtitle {
+  color: var(--gray-300);
+}
+
+/* ── Listings Grid ── */
+.listings-section {
+  padding: var(--space-16) 0 var(--space-24);
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: var(--space-8);
+}
+
+/* ── Listing Detail Card (expanded) ── */
+.listing-detail {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--space-12);
+  transition: box-shadow var(--duration-base) var(--ease-out);
+}
+
+.listing-detail:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+.listing-detail__gallery {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.listing-detail__gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.listing-detail__gallery-nav {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-2);
+}
+
+.listing-detail__gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.listing-detail__gallery-dot.active {
+  background: var(--gold-400);
+  width: 24px;
+}
+
+.listing-detail__content {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-8);
+}
+
+.listing-detail__info {
+  padding: var(--space-8);
+}
+
+.listing-detail__sidebar {
+  padding: var(--space-8);
+  background: var(--cream);
+  border-left: 1px solid var(--color-border);
+}
+
+.listing-detail__price-box {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.listing-detail__price-box .price {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--navy-800);
+  font-weight: 700;
+}
+
+.listing-detail__price-box .price-unit {
+  font-size: var(--text-sm);
+  color: var(--gray-400);
+  font-weight: 400;
+}
+
+.listing-detail__amenities-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin: var(--space-6) 0;
+}
+
+.listing-detail__amenities-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+}
+
+.listing-detail__amenities-list li::before {
+  content: '✓';
+  color: var(--gold-500);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+/* ── Intro Block ── */
+.listings-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-12);
+}
+
+/* ── Filters ── */
+.listings-filters {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+  background: var(--white);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--navy-800);
+  color: var(--gold-400);
+  border-color: var(--navy-800);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .listing-detail__content {
+    grid-template-columns: 1fr;
+  }
+
+  .listing-detail__sidebar {
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 768px) {
+  .listings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .listing-detail__gallery {
+    height: 280px;
+  }
+
+  .listing-detail__amenities-list {
+    grid-template-columns: 1fr;
+  }
+}
