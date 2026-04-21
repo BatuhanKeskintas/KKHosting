@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Short-Term Rentals — KK Hosting | Premium Apartments in Warsaw</title>
+  <meta name="description" content="Browse our premium short-term rental apartments in Warsaw. Professionally managed, beautifully furnished, with seamless self check-in. Book your perfect stay today." />
+  <link rel="icon" type="image/png" href="public/images/logo/logo.png" />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/listings.css" />
+</head>
+<body>
+
+  <!-- ═══════════ PAGE HERO ═══════════ -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="public/images/muranow/living-room-2.png" alt="Premium apartment" />
+    </div>
+    <div class="container text-center">
+      <span class="section-label reveal">Short-Term Rentals</span>
+      <h1 class="reveal">Premium Stays in Warsaw</h1>
+      <p class="section-subtitle reveal" style="margin: var(--space-4) auto 0;">Discover our handpicked apartments for weekend getaways, business trips, and short-term stays. Every property offers hotel-level comfort with the warmth of home.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════ INTRO ═══════════ -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="listings-intro reveal">
+        <span class="section-label">The KK Hosting Experience</span>
+        <div class="gold-line" style="margin: 0 auto var(--space-6);"></div>
+        <p style="font-size: var(--text-lg); color: var(--gray-600); line-height: 1.8;">Every apartment in our collection has been personally inspected, professionally styled, and is maintained to the highest standards. Expect premium linens, fast WiFi, fully equipped kitchens, and a dedicated support team ready to help at any moment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FILTERS ═══════════ -->
+  <section class="section" style="padding-top: var(--space-8); padding-bottom: var(--space-4);">
+    <div class="container">
+      <div class="listings-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Properties</button>
+        <button class="filter-btn" data-filter="mokotow">Mokotów</button>
+        <button class="filter-btn" data-filter="muranow">Muranów</button>
+        <button class="filter-btn" data-filter="center">City Center</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ LISTINGS ═══════════ -->
+  <section class="listings-section">
+    <div class="container">
+
+      <!-- Property 1: Cozy Apartment Mokotów -->
+      <div class="listing-detail reveal" data-area="mokotow">
+        <div class="listing-detail__gallery">
+          <img src="public/images/mokotow/living-room.webp" alt="Cozy Apartment Mokotów — Living Room" id="mokotow-main" />
+          <div class="listing-detail__gallery-nav">
+            <span class="listing-detail__gallery-dot active" onclick="changeImage('mokotow-main', 'public/images/mokotow/living-room.webp', this)"></span>
+            <span class="listing-detail__gallery-dot" onclick="changeImage('mokotow-main', 'public/images/mokotow/bedroom.avif', this)"></span>
+            <span class="listing-detail__gallery-dot" onclick="changeImage('mokotow-main', 'public/images/mokotow/kitchen.avif', this)"></span>
+            <span class="listing-detail__gallery-dot" onclick="changeImage('mokotow-main', 'public/images/mokotow/bathroom.avif', this)"></span>
+            <span class="listing-detail__gallery-dot" onclick="changeImage('mokotow-main', 'public/images/mokotow/dining.avif', this)"></span>
+          </div>
+        </div>
+        <div class="listing-detail__content">
+          <div class="listing-detail__info">
+            <span class="property-card__location">Mokotów, Warsaw</span>
+            <h2 style="font-size: var(--text-3xl); margin-bottom: var(--space-4);">Cozy Apartment Mokotów</h2>
+            <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: var(--space-6);">Nestled in one of Warsaw's most sought-after residential neighborhoods, this beautifully appointed apartment offers a perfect blend of comfort and style. Ideal for couples and business travelers looking for a quiet retreat with easy metro access to the city center.</p>
+            <h4 style="margin-bottom: var(--space-4);">Amenities & Features</h4>
+            <ul class="listing-detail__amenities-list">
+              <li>High-speed WiFi</li>
+              <li>Fully equipped kitchen</li>
+              <li>Washing machine</li>
+              <li>Smart TV</li>
+              <li>Self check-in</li>
+              <li>Fresh linens & towels</li>
+              <li>Air conditioning</li>
+              <li>Iron & hair dryer</li>
+              <li>Coffee & tea station</li>
+              <li>Quiet neighborhood</li>
+            </ul>
+          </div>
+          <div class="listing-detail__sidebar">
+            <div class="listing-detail__price-box">
+              <div class="price">€65 <span class="price-unit">/ night</span></div>
+              <p style="font-size: var(--text-xs); color: var(--gray-400); margin: var(--space-2) 0 0;">Minimum stay: 2 nights</p>
+            </div>
+            <div style="margin-bottom: var(--space-4);">
+              <p style="font-size: var(--text-sm); color: var(--gray-600);"><strong>Guests:</strong> Up to 5</p>
+              <p style="font-size: var(--text-sm); color: var(--gray-600);"><strong>Bedrooms:</strong> 1</p>
+              <p style="font-size: var(--text-sm); color: var(--gray-600);"><strong>Bathrooms:</strong> 1</p>
+              <p style="font-size: var(--text-sm); color: var(--gray-600); margin-bottom: 0;"><strong>Size:</strong> ~45 m²</p>
+            </div>
+            <a href="contact.html" class="btn btn--gold btn--full" style="margin-bottom: var(--space-3);">Request Availability</a>
+            <a href="contact.html" class="btn btn--outline btn--full">Ask for Pricing</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 2: Panoramic Parkview Apartment Muranów -->
+      <div class="listing-detail reveal" data-area="muranow">
+        <div class="listing-detail__gallery">
+          <img src="public/images/muranow/living-room-1.png" alt="Panoramic Parkview Apartment — Living Room" id="muranow-main" />
+          <div class="listing-detail__gallery-nav">
+            <span class="listing-detail__gallery-dot active" onclick="changeImage('muranow-main', 'public/images/muranow/living-room-1.png', this)"></span>
+            <span class="listing-detail__gallery-dot" onclick="changeImage('muranow-main', 'public/images/muranow/bedroom-1.png', this)"></span>
+            <span class="listing-detail__gallery-dot" onclick="changeImage('muranow-main', 'public/images/muranow/kitchen-1.png', this)"></span>
+            <span class="listing-detail__gallery-dot" onclick="changeImage('muranow-main', 'public/images/muranow/bathroom-1.png', this)"></span>
+            <span class="listing-detail__gallery-dot" onclick="changeImage('muranow-main', 'public/images/muranow/garden-1.png', this)"></span>
+          </div>
+        </div>
+        <div class="listing-detail__content">
+          <div class="listing-detail__info">
+            <span class="property-card__location">Muranów, Warsaw</span>
+            <h2 style="font-size: var(--text-3xl); margin-bottom: var(--space-4);">Panoramic Parkview Apartment</h2>
+            <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: var(--space-6);">A truly exceptional property featuring panoramic park views from a spacious, elegantly designed living space. The apartment includes a private garden area, making it ideal for families or guests who appreciate extra space and nature within the city.</p>
+            <h4 style="margin-bottom: var(--space-4);">Amenities & Features</h4>
+            <ul class="listing-detail__amenities-list">
+              <li>Panoramic park views</li>
+              <li>Private garden area</li>
+              <li>High-speed WiFi</li>
+              <li>Full kitchen with dining</li>
+              <li>Self check-in</li>
+              <li>Premium linens & towels</li>
+              <li>Smart TV with streaming</li>
+              <li>Workspace desk</li>
+              <li>Washing machine & dryer</li>
+              <li>Coffee machine</li>
+              <li>Air conditioning</li>
+              <li>Underground parking available</li>
+            </ul>
+          </div>
+          <div class="listing-detail__sidebar">
+            <div class="listing-detail__price-box">
+              <div class="price">€85 <span class="price-unit">/ night</span></div>
+              <p style="font-size: var(--text-xs); color: var(--gray-400); margin: var(--space-2) 0 0;">Minimum stay: 2 nights</p>
+            </div>
+            <div style="margin-bottom: var(--space-4);">
+              <p style="font-size: var(--text-sm); color: var(--gray-600);"><strong>Guests:</strong> Up to 6</p>
+              <p style="font-size: var(--text-sm); color: var(--gray-600);"><strong>Bedrooms:</strong> 2</p>
+              <p style="font-size: var(--text-sm); color: var(--gray-600);"><strong>Bathrooms:</strong> 1</p>
+              <p style="font-size: var(--text-sm); color: var(--gray-600); margin-bottom: 0;"><strong>Size:</strong> ~75 m²</p>
+            </div>
+            <a href="contact.html" class="btn btn--gold btn--full" style="margin-bottom: var(--space-3);">Request Availability</a>
+            <a href="contact.html" class="btn btn--outline btn--full">Ask for Pricing</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 3: Studio Apartment Center -->
+      <div class="listing-detail reveal" data-area="center">
+        <div class="listing-detail__gallery">
+          <img src="public/images/studio-center/living-room.png" alt="Studio Apartment Center — Living Room" id="center-main" />
+          <div class="listing-detail__gallery-nav">
+            <span class="listing-detail__gallery-dot active" onclick="changeImage('center-main', 'public/images/studio-center/living-room.png', this)"></span>
+            <span class="listing-detail__gallery-dot" onclick="changeImage('center-main', 'public/images/studio-center/kitchen.png', this)"></span>
+            <span class="listing-detail__gallery-dot" onclick="changeImage('center-main', 'public/images/studio-center/bathroom.png', this)"></span>
+            <span class="listing-detail__gallery-dot" onclick="changeImage('center-main', 'public/images/studio-center/entrance.png', this)"></span>
+          </div>
+        </div>
+        <div class="listing-detail__content">
+          <div class="listing-detail__info">
+            <span class="property-card__location">City Center, Warsaw</span>
+            <h2 style="font-size: var(--text-3xl); margin-bottom: var(--space-4);">Studio Apartment Center</h2>
+            <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: var(--space-6);">A modern, thoughtfully designed studio apartment right in the heart of Warsaw. Steps from restaurants, shops, and cultural landmarks. The perfect base for solo travelers and professionals who want to be in the middle of it all.</p>
+            <h4 style="margin-bottom: var(--space-4);">Amenities & Features</h4>
+            <ul class="listing-detail__amenities-list">
+              <li>Prime central location</li>
+              <li>High-speed WiFi</li>
+              <li>Compact kitchen</li>
+              <li>Smart TV</li>
+              <li>Self check-in</li>
+              <li>Fresh linens & towels</li>
+              <li>Washing machine</li>
+              <li>Air conditioning</li>
+              <li>Walking distance to metro</li>
+              <li>Restaurants & cafés nearby</li>
+            </ul>
+          </div>
+          <div class="listing-detail__sidebar">
+            <div class="listing-detail__price-box">
+              <div class="price">€55 <span class="price-unit">/ night</span></div>
+              <p style="font-size: var(--text-xs); color: var(--gray-400); margin: var(--space-2) 0 0;">Minimum stay: 2 nights</p>
+            </div>
+            <div style="margin-bottom: var(--space-4);">
+              <p style="font-size: var(--text-sm); color: var(--gray-600);"><strong>Guests:</strong> Up to 4</p>
+              <p style="font-size: var(--text-sm); color: var(--gray-600);"><strong>Bedrooms:</strong> Studio</p>
+              <p style="font-size: var(--text-sm); color: var(--gray-600);"><strong>Bathrooms:</strong> 1</p>
+              <p style="font-size: var(--text-sm); color: var(--gray-600); margin-bottom: 0;"><strong>Size:</strong> ~32 m²</p>
+            </div>
+            <a href="contact.html" class="btn btn--gold btn--full" style="margin-bottom: var(--space-3);">Request Availability</a>
+            <a href="contact.html" class="btn btn--outline btn--full">Ask for Pricing</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA ═══════════ -->
+  <section class="section section--dark text-center">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Can't Find What You Need?</span>
+        <h2 style="color: var(--white); margin-bottom: var(--space-4);">Let Us Find Your Perfect Stay</h2>
+        <p style="color: var(--gray-400); max-width: 500px; margin: 0 auto var(--space-8);">Tell us your preferences, dates, and budget — and we'll match you with the ideal apartment in Warsaw.</p>
+        <a href="contact.html" class="btn btn--gold btn--lg">Request a Custom Stay</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/components.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initHeader(false);
+      initFooter();
+    });
+
+    // Gallery image change
+    function changeImage(imgId, src, dot) {
+      document.getElementById(imgId).src = src;
+      const dots = dot.parentElement.querySelectorAll('.listing-detail__gallery-dot');
+      dots.forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+    }
+
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        document.querySelectorAll('.listing-detail').forEach(listing => {
+          if (filter === 'all' || listing.getAttribute('data-area') === filter) {
+            listing.style.display = '';
+          } else {
+            listing.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
